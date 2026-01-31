@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelino Saul | Portfolio</title>
+    <style>
+        /* GLOBAL STYLES */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        a {
+            color: #00fff7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* NEON HEADINGS */
+        h1 {
+            font-size: 3rem;
+            color: #00fff7;
+            text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #00fff7;
+            margin: 0.5rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #ff00ff;
+            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            max-width: 700px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .project {
+            background-color: #111;
+            border: 1px solid #00fff7;
+            border-radius: 10px;
+            padding: 1rem 2rem;
+            margin: 1rem 0;
+            width: 80%;
+            max-width: 600px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #00fff7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 100;
+        }
+
+        nav a {
+            font-weight: bold;
+            color: #00fff7;
+        }
+
+        nav a:hover {
+            color: #ff00ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#tinkerhub">Motivation</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+    <h1>Angelino Saul</h1>
+    <p>
+        I am a second-year B.Tech Computer Science student at NSS College of Engineering, Palakkad.  
+        I love experimenting, taking on new challenges, and pushing my brain to think in creative ways.  
+        My passion is building tools and projects that let me learn by doing.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>Resume Builder (HTML)</h3>
+        <p>HTML-based resume builder developed in semester 2. Learned web fundamentals, forms, and UX basics.</p>
+    </div>
+
+    <div class="project">
+        <h3>Health Risk Analyser (Java)</h3>
+        <p>Java-based tool that calculates risk for diabetes, cardiovascular, and respiratory diseases using international scoring models.</p>
+    </div>
+
+    <div class="project">
+        <h3>Flying Squirrel (Python / Pygame)</h3>
+        <p>Game developed in Python to explore graphics, event handling, and game logic. Demo video available on LinkedIn.</p>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+        Connect with me on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>  
+        or check out my projects on <a href="https://github.com" target="_blank">GitHub</a>.
+    </p>
+</section>
+
+<footer>
+    &copy; 2026 Angelino Saul. All rights reserved.
+</footer>
+
+</body>
+</html>
 
