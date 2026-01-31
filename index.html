@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelino Saul | Portfolio</title>
+    <title>Angelino Saul</title>
     <style>
-        /* GLOBAL STYLES */
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html { scroll-behavior: smooth; }
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #0d0d0d;
             color: #fff;
         }
-
-        a {
-            color: #00fff7;
-            text-decoration: none;
+        a { color: #00fff7; text-decoration: none; }
+        a:hover { color: #ff00ff; }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 100;
         }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        nav a { font-weight: bold; }
 
         section {
             min-height: 100vh;
@@ -38,13 +39,8 @@
             text-align: center;
         }
 
-        h1, h2 {
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-        }
-
-        /* NEON HEADINGS */
         h1 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 3rem;
             color: #00fff7;
             text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #00fff7;
@@ -52,16 +48,25 @@
         }
 
         h2 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 2rem;
             color: #ff00ff;
             text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
             margin-bottom: 1rem;
         }
 
-        p {
-            max-width: 700px;
-            line-height: 1.6;
-            color: #ccc;
+        p { max-width: 700px; line-height: 1.6; color: #ccc; }
+
+        .profile-pic {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid #00fff7;
+            margin-bottom: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #00fff7;
         }
 
         .project {
@@ -74,31 +79,9 @@
             max-width: 600px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 20px #00fff7;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.9);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            z-index: 100;
-        }
-
-        nav a {
-            font-weight: bold;
-            color: #00fff7;
-        }
-
-        nav a:hover {
-            color: #ff00ff;
+            box-shadow: 0 0 20px #ff00ff;
         }
 
         footer {
@@ -108,6 +91,15 @@
             font-size: 0.9rem;
         }
 
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -116,12 +108,12 @@
 <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#tinkerhub">Motivation</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="fade-in">
+    <img src="angelino.jpg" alt="Angelino Saul" class="profile-pic">
     <h1>Angelino Saul</h1>
     <p>
         I am a second-year B.Tech Computer Science student at NSS College of Engineering, Palakkad.  
@@ -131,7 +123,7 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="fade-in">
     <h2>Projects</h2>
 
     <div class="project">
@@ -150,9 +142,8 @@
     </div>
 </section>
 
-
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="fade-in">
     <h2>Contact Me</h2>
     <p>
         Connect with me on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>  
@@ -164,6 +155,18 @@
     &copy; 2026 Angelino Saul. All rights reserved.
 </footer>
 
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
 </body>
 </html>
-
