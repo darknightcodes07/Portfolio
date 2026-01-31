@@ -1,172 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelino Saul</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saul | Portfolio</title>
 
-        html { scroll-behavior: smooth; }
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #0d0d0d;
-            color: #fff;
-        }
-        a { color: #00fff7; text-decoration: none; }
-        a:hover { color: #ff00ff; }
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.9);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            z-index: 100;
-        }
-        nav a { font-weight: bold; }
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            text-align: center;
-        }
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            color: #00fff7;
-            text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #00fff7;
-            margin: 0.5rem 0;
-        }
-
-        h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            color: #ff00ff;
-            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
-            margin-bottom: 1rem;
-        }
-
-        p { max-width: 700px; line-height: 1.6; color: #ccc; }
-
-        .profile-pic {
-            width: 150px;
-            border-radius: 50%;
-            border: 3px solid #00fff7;
-            margin-bottom: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .profile-pic:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px #00fff7;
-        }
-
-        .project {
-            background-color: #111;
-            border: 1px solid #00fff7;
-            border-radius: 10px;
-            padding: 1rem 2rem;
-            margin: 1rem 0;
-            width: 80%;
-            max-width: 600px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px #ff00ff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <!-- CSS FILE LINK -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Saul</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- ABOUT -->
-<section id="about" class="fade-in">
-    <img src="angelino.jpg" alt="Angelino Saul" class="profile-pic">
-    <h1>Angelino Saul</h1>
-    <p>
-        I am a second-year B.Tech Computer Science student at NSS College of Engineering, Palakkad.  
-        I love experimenting, taking on new challenges, and pushing my brain to think in creative ways.  
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <div class="circle"></div>
+      <img src="Screenshots/Angelino.png" alt="Saul">
+    </div>
+
+    <div class="hero-right">
+      <h1>Hi, It's <span>Saul</span></h1>
+      <h2>I'm a <span class="accent">Computer Science Student</span></h2>
+
+      <p>
+        I am a second-year B.Tech Computer Science student at NSS College of Engineering, Palakkad.<br><br>
+        I love experimenting, taking on new challenges, and pushing my brain to think in creative ways.<br><br>
         My passion is building tools and projects that let me learn by doing.
-    </p>
-</section>
+      </p>
 
-<!-- PROJECTS -->
-<section id="projects" class="fade-in">
-    <h2>Projects</h2>
+      <div class="socials">
+        <a href="https://linkedin.com" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
 
-    <div class="project">
-        <h3>Resume Builder (HTML)</h3>
-        <p>HTML-based resume builder developed in semester 2. Learned web fundamentals, forms, and UX basics.</p>
+      <a href="#contact" class="btn">Contact Me</a>
     </div>
+  </section>
 
-    <div class="project">
-        <h3>Health Risk Analyser (Java)</h3>
-        <p>Java-based tool that calculates risk for diabetes, cardiovascular, and respiratory diseases using international scoring models.</p>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span>Python</span>
+      <span>Java</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Git & GitHub</span>
     </div>
+  </section>
 
-    <div class="project">
-        <h3>Flying Squirrel (Python / Pygame)</h3>
-        <p>Game developed in Python to explore graphics, event handling, and game logic. Demo video available on LinkedIn.</p>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <p>
-        Connect with me on <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>  
-        or check out my projects on <a href="https://github.com" target="_blank">GitHub</a>.
-    </p>
-</section>
-
-<footer>
-    &copy; 2026 Angelino Saul. All rights reserved.
-</footer>
-
-<script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('show');
-            observer.unobserve(entry.target);
-        });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
-</script>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me via LinkedIn or GitHub.</p>
+  </section>
 
 </body>
 </html>
